@@ -14,7 +14,7 @@ while True:
         lista = []
         while True:
             entrada = input("Ingrese un número (ingrese un número negativo para terminar): ")
-            if entrada == "-1":
+            if entrada < 0:
                 break
             try:
                 elemento = int(entrada)

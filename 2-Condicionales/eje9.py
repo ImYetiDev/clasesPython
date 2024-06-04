@@ -1,31 +1,35 @@
+""" Pregunta al usuario que ingrese 6 números para jugar a la lotería. Luego, genera
+aleatoriamente 6 números y determina cuántos números coinciden. Utiliza condicionales para
+mostrar el premio correspondiente """
+
 import random
 
-print("Ingrese 6 números para jugar a la lotería:")
-numero1 = int(input("Ingrese el número 1: "))
-numero2 = int(input("Ingrese el número 2: "))
-numero3 = int(input("Ingrese el número 3: "))
-numero4 = int(input("Ingrese el número 4: "))
-numero5 = int(input("Ingrese el número 5: "))
-numero6 = int(input("Ingrese el número 6: "))
-numeros_usuario = [numero1, numero2, numero3, numero4, numero5, numero6]
+user_numbers = []
+lottery_numbers = []
 
-numeros_loteria = random.sample(range(1, 51), 6)
+for i in range(6):
+  user_numbers.append(int(input(f'Ingrese el numero {i+1}: ')))
 
-coincidencias = len(set(numeros_usuario).intersection(numeros_loteria))
+for i in range(6):
+  lottery_numbers.append(random.randint(1, 5))
 
+print(f'Los numeros de la loteria son: {lottery_numbers}')
 
-print("Los números de la lotería son:", numeros_loteria)
-print(f"Ha acertado {coincidencias} números.")
+coincidencias = 0
 
+for i in user_numbers:
+  if i in lottery_numbers:
+    coincidencias += 1
 
 if coincidencias == 6:
-    print("¡Felicidades! Ha ganado el premio mayor.")
-elif coincidencias >= 3:
-    print("Ha ganado un premio menor.")
+  print('Felicidades, has ganado el premio mayor')
+elif coincidencias == 5:
+  print('Felicidades, has ganado el segundo premio')
+elif coincidencias == 4:
+  print('Felicidades, has ganado el tercer premio')
+elif coincidencias == 3:
+  print('Felicidades, has ganado el cuarto premio')
 else:
-    print("No has ganado ningún premio.")
+  print('Lo siento, no has ganado nada')
+
   
-
-
-    
-    

@@ -1,14 +1,16 @@
+""" Pide al usuario que ingrese las longitudes de los lados de un triángulo. Utiliza condicionales
+para determinar si el triángulo es equilátero, isósceles, escaleno o no válido. """
 
-lado1 = float(input("Ingrese la longitud del primer lado del triángulo: "))
-lado2 = float(input("Ingrese la longitud del segundo lado del triángulo: "))
-lado3 = float(input("Ingrese la longitud del tercer lado del triángulo: "))
+lado1 = float(input("Ingrese la longitud del primer lado: "))
+lado2 = float(input("Ingrese la longitud del segundo lado: "))
+lado3 = float(input("Ingrese la longitud del tercer lado: "))
 
-
-if lado1 + lado2 <= lado3 or lado1 + lado3 <= lado2 or lado2 + lado3 <= lado1:
-    print("No es un triángulo válido.")
-elif lado1 == lado2 == lado3:
-    print("Es un triángulo equilátero.")
-elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
-    print("Es un triángulo isósceles.")
+if lado1 + lado2 < lado3 or lado1 + lado3 < lado2 or lado2 + lado3 < lado1:
+  print("Tu triangulo no es valido")
 else:
-    print("Es un triángulo escaleno.")
+  if lado1 == lado2 and lado2 == lado3:
+    print("El triangulo es equilatero")
+  elif lado1 == lado2 or lado2 == lado3 or lado1 == lado3:
+    print("El triangulo es isosceles")
+  elif lado1 != lado2 and lado2 != lado3 and lado1 != lado3:
+    print("El triangulo es escaleno")

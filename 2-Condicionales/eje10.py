@@ -1,11 +1,15 @@
-precio_producto = float(input("Ingrese el precio del producto: "))
-cantidad_comprada = int(input("Ingrese la cantidad comprada: "))
+""" Solicita al usuario que ingrese el precio de un producto y la cantidad comprada. Calcula el
+total a pagar y aplica un descuento del 10% si la cantidad es mayor o igual a 10. """
 
-total_pagar = precio_producto * cantidad_comprada
+precio = int(input("Ingresa el precio del producto: "))
+cantidad = int(input("Ingresa la cantidad comprada: "))
 
+total = precio * cantidad
 
-if cantidad_comprada >= 10:
-    descuento = total_pagar * 0.10
-    total_pagar -= descuento
-
-print("El total a pagar es: ${:.2f}".format(total_pagar))
+if cantidad >= 10:
+  total = total - (total * 0.10)
+  print(f"Se aplica un descuento del 10%")
+  print(f'El total a pagar es: {total}')
+else:
+  print("No se aplica descuento")
+  print(f'El total a pagar es: {total}')

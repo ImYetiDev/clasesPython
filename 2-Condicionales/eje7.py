@@ -1,19 +1,25 @@
+""" Genera dos números aleatorios y muestra al usuario la suma de los números. Pídele al
+usuario que adivine cuáles fueron los números originales. Utiliza condicionales para
+determinar si la respuesta del usuario es correcta. """
 import random
 
-numero1 = random.randint(1, 100)
-numero2 = random.randint(1, 100)
+num1 = random.randint(1, 5)
+num2 = random.randint(1, 5)
 
-suma = numero1 + numero2
+suma = num1 + num2 
 
-print("La suma de los dos números es:", suma)
+print(f'La suma es: {suma}')
 
-adivina1 = int(input("Adivina el primer número: "))
-adivina2 = int(input("Adivina el segundo número: "))
+print('Cuales crees que son los numeros usados en la suma [1-5]')
 
-if adivina1 == numero1 and adivina2 == numero2:
-    print("¡Felicidades! Adivinaste los números .")
-elif adivina1 == numero2 and adivina2 == numero1:
-    print("¡Felicidades! Adivinaste los números en diferente orden.")
+input1 = int(input('Ingrese el primer numero: '))
+input2 = int(input('Ingrese el segundo numero: '))
+
+if input1 == num1 and input2 == num2:
+  print('Felicidades, has acertado los 2 numeros')
+elif input1 == num1:
+  print(f'Lo siento, solo encontraste uno, eran {num1} y {num2}')
+elif input2 == num2:
+  print(f'Lo siento, solo encontraste uno, eran {num1} y {num2}')
 else:
-    print("Lo siento, no adivinaste los números.")
-    print("Los números originales eran:", numero1, "y", numero2)
+  print(f'Lo siento, los numeros eran {num1} y {num2}')
