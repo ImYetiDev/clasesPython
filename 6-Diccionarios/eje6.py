@@ -1,0 +1,3 @@
+"""Crea un diccionario inventario_libros donde las claves sean los codigos de los libros y losvalores sean tuplas con el títulos,autor, el número de copias disponibles y valor del libro.Agrega al menos 5 libros con sus respectivos autores y copias disponibles.
+a. Muestra al usuario los libros disponibles de un autor específi co.
+b.Permite al usuario comprar de un libro la cantidad si esta disponible y actualizar el númerode copias disponibles de ese libro. Se debe mostrar al cliente el valor a pagar."""
