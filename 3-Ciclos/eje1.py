@@ -39,8 +39,3 @@ elif preguntas_correctas >= 3:
     print("Aquí tienes la tabla completa:")
     for i in range(1, 11):
         print(tabla, "x", i, "=", tabla * i)
-    
-    
-    
-        
-        
